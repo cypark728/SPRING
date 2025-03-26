@@ -12,5 +12,6 @@ public class MainClass {
 		
 		Hotel hotel = ctx.getBean(Hotel.class);
 		hotel.getChef().cooking();
+		
 	}
 }
