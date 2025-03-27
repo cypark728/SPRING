@@ -8,21 +8,20 @@ public class MemberVO { //DTO랑 똑같은거임
 	private String pw;
 	private String name;
 	private ArrayList<String> inter;
+	private String nick;
+	private String birth;
 	
 	public MemberVO() {
 	}
 
-	public MemberVO(String id, String pw, String name, ArrayList<String> inter) {
+	public MemberVO(String id, String pw, String name, ArrayList<String> inter, String nick, String birth) {
 		super();
 		this.id = id;
 		this.pw = pw;
 		this.name = name;
 		this.inter = inter;
-	}
-
-	@Override
-	public String toString() {
-		return "MemberVO [id=" + id + ", pw=" + pw + ", name=" + name + ", inter=" + inter + "]";
+		this.nick = nick;
+		this.birth = birth;
 	}
 
 	public String getId() {
@@ -56,6 +55,24 @@ public class MemberVO { //DTO랑 똑같은거임
 	public void setInter(ArrayList<String> inter) {
 		this.inter = inter;
 	}
+
+	public String getNick() {
+		return nick;
+	}
+
+	public void setNick(String nick) {
+		this.nick = nick;
+	}
+
+	public String getBirth() {
+		return birth;
+	}
+
+	public void setBirth(String birth) {
+		this.birth = birth;
+	}
+
+	
 	
 	
 }
