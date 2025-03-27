@@ -2,6 +2,8 @@ package com.simple.controller;
 
 import java.util.ArrayList;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,7 +17,10 @@ import com.simple.command.BoardVO;
 @RequestMapping("/board")
 public class BoardController {
 	
-	private BoardService service = new BoardServiceImpl();
+	//private BoardService service = new BoardServiceImpl();
+	@Autowired
+	@Qualifier("aboard")
+	private BoardService service;
 
 	@RequestMapping("/boardList")
 	public String boardList(Model model) {

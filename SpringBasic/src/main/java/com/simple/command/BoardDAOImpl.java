@@ -2,9 +2,12 @@ package com.simple.command;
 
 import java.util.ArrayList;
 
+import org.springframework.stereotype.Repository;
+
+@Repository("boardDAO")
 public class BoardDAOImpl implements BoardDAO{
 	
-	ArrayList<BoardVO> list = new ArrayList<>();
+	private ArrayList<BoardVO> list = new ArrayList<>();
 	
 	@Override
 	public void regist(BoardVO vo) {
